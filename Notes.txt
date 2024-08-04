@@ -1,0 +1,13 @@
+"git push --force"
+this will push even if  you change the history
+like you pull and then do rebase -i and push this
+not allowing because you change the history that 
+in the remote but now you can
+
+"git push --force-with-lease"
+will check first if the last commmit in the remote is 
+yours so you dont delete work of any body else
+VERY VERY GREAT OPTION
+
+
+
