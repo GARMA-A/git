@@ -10,4 +10,12 @@ yours so you dont delete work of any body else
 VERY VERY GREAT OPTION
 
 
+"git add -p fileName"
+will ask you in each connected chunck of lines if 
+you want to add them to staging area or not 
+so you can add half of the file to this commit and
+another half to the second commit this usefal if there is more
+that one edit the same file so you need to take just your
+own changes to cur commit 
+
 
