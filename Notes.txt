@@ -9,7 +9,6 @@ will check first if the last commmit in the remote is
 yours so you dont delete work of any body else
 VERY VERY GREAT OPTION
 
-
 "git add -p fileName"
 will ask you in each connected chunck of lines if 
 you want to add them to staging area or not 
