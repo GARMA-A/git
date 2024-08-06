@@ -18,3 +18,14 @@ that one edit the same file so you need to take just your
 own changes to cur commit 
 
 
+"git cherry-pick commit-hash1 commit-hash2"
+
+add this commits changes to my carrent branch
+create new commits that have this changes on top of 
+your current commits
+
+you can add range of commits also 
+
+"git cherry-pick commit-hash1^..commit-hash2"
+power full command 
+
