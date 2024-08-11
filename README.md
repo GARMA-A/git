@@ -189,7 +189,7 @@ show's the data like that
 # **Summary for Important Git Commmands**
 
 
-## **"git cat-file -p -s -t commit-hash"**
+## **`git cat-file -p -s -t commit-hash`**
 
 #### **-p will show content of the obj**
 
@@ -199,7 +199,7 @@ show's the data like that
 
 <hr/>
 
-## **"git rm --cached filename"**
+## **`git rm --cached filename`**
 
 #### **make the file untracked do not delete it just untracked**
 #### **you can use -r before --cached and . after --cached to rm every thing**
@@ -207,7 +207,7 @@ show's the data like that
 
 
 
-## **"git ls-files "**
+## **`git ls-files`**
 
 #### **will list all the files that are currently being tracked by Git in the repository.**
 
@@ -219,18 +219,56 @@ show's the data like that
 
 <hr/>
 
-## **"git checkout-index -a "**
+## **`git checkout-index -a`**
 #### **overwrite your working tree with the staging changes(-a stand for all)**
 <hr/>
 
-## **"git checkout ."**
+## **`git checkout .`**
 
 #### **will look for the last saved changes on staging area or last commit and**
 #### **overwrite the working tree**
+<hr/>
+
+## **`git checkout -- . (git restore .)`**
+#### **Both discards changes in all files in the working directory, restoring them to the last committed state**
 
 <hr/>
 
-## **"git push --force"**
+## **`git restore --staged . (git reset HEAD .)`**
+#### **Both will remove all your files from staging area but keep the changes in worktree**
+
+<hr/>
+
+## **`git checkout -b branch-name (git switch -c branch-name)`**
+#### **Both create and go to the new-branch**
+#### **without '-b' you will just switch to existing branch or without(-c) in switch**
+<hr/>
+
+## **`git checkout commit-hash`**
+#### **Move to that commit and change worktree to that commit. WARNING! you are in`detached HEAD`**
+#### **`detached HEAD` this mean there is no branch point to this commit so if you made new commits from this point**
+#### **The prefer way is to use (git checkout -b new-branch-name) to make branch point to it so that it easly can return to it**
+#### **if you don't do that and return to the main branch the only way to return to this commits is from reflog**
+#### **`git branch -f existing-branch` another way is to force existing branch to point to current commit**
+
+
+
+<hr/>
+
+
+## **`git push -u origin branch-name`**
+
+#### **after create your local branch you can push it to remote that way(create new branch in remote)**
+
+<hr/>
+
+## **`git push origin --delete branch-name`**
+
+#### **allow you to delete remote branch**
+
+<hr/>
+
+## **`git push --force`**
 
 #### **this will push even if you change the history**
 
@@ -242,7 +280,7 @@ show's the data like that
 
 <hr/>
 
-## **"git push --force-with-lease"**
+## **`git push --force-with-lease`**
 
 #### **will check first if the last commmit in the remote is**
 
@@ -252,7 +290,7 @@ show's the data like that
 
 <hr/>
 
-## **"git add -p fileName"**
+## **`git add -p fileName`**
 
 #### **will ask you in each connected chunck of lines if**
 
@@ -268,21 +306,19 @@ show's the data like that
 
 <hr/>
 
-## **"git cherry-pick commit-hash1 commit-hash2"**
+## **`git cherry-pick commit-hash1 commit-hash2`**
 
-#### **add this commits changes to my carrent branch**
+#### **create new commits that have this changes on top of your current commits**
 
-#### **create new commits that have this changes on top of**
+<hr/>
 
-#### **your current commits**
+## **`git cherry-pick commit-hash1^..commit-hash2`**
 
-### **you can add range of commits also**
+#### **you can add range of commits also to add to your current branch**
 
-## **"git cherry-pick commit-hash1^..commit-hash2"**
+<hr/>
 
-#### **powerfull command**
-
-## **git diff**
+## **`git diff`**
 
 #### **Default Behavior: If you run git diff without any arguments,**
 
@@ -294,30 +330,17 @@ show's the data like that
 
 #### **untracked changes in the working directory to the last committed state.**
 
-## **2. git diff HEAD:**
+<hr/>
 
-#### **Comparison: git diff HEAD compares the staging area (index) to the last commit (HEAD).**
+## **`git diff HEAD`**
 
-#### **Empty Staging Area: If nothing is staged, there are no differences**
+#### **compares the staging and not staged changes to the last commit (HEAD).**
 
-#### **to compare between the staging area and the last commit. Therefore,**
+<hr/>
 
-#### **git diff HEAD will produce no output because there's nothing in the**
+## **`git diff --cached or (git diff --staged)`**
 
-#### **staging area to compare against the last commit.**
+#### **shows the differences between the staged changes and the last commit.**
 
-## **3. git diff --cached**
 
-#### **Comparison: git diff --cached (or git diff --staged) shows the differences between the staged changes and the last commit.**
 
-#### **Empty Staging Area: If there are no staged changes, this command will also produce no output,**
-
-#### **as there's nothing in the staging area to compare to the last commit.**
-
-## **git push -u origin branch-name**
-
-#### **after create your local branch you can push it to remote that way**
-
-## **git push origin --delete branch-name**
-
-#### **allow you to delete remote branch**
