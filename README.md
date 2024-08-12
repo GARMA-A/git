@@ -186,16 +186,29 @@ show's the data like that
 
 ### i dont agree with that
 
-# **Summary for Important Git Commmands**
+# **The Most Important Git Commmands**
 
 
-## **`git cat-file -p -s -t commit-hash`**
+## **`git cat-file commit-hash`**
 
-#### **-p will show content of the obj**
+#### **`-p` will show content of the obj**
 
-#### **-s size of the obj**
+#### **`-s` size of the obj**
 
-#### **-t type of the obj**
+#### **`-t` type of the obj**
+
+<hr/>
+
+## **`git log`**
+
+#### **`git shortlog` summary version**
+
+#### **`git log --stat` describing version**
+
+#### **`-n 2` show first two `-p` normal log + diff**
+#### **`--author=name` all logs for one person `--grep="bug fix"` all logs with this words**
+#### **`--since="2024-01-01"` `--until="2024-01-31"`**
+#### **`--merges`show only merge commits `--no-merges` all commits but without merge commits**
 
 <hr/>
 
@@ -205,17 +218,15 @@ show's the data like that
 #### **you can use -r before --cached and . after --cached to rm every thing**
 <hr/>
 
-
-
 ## **`git ls-files`**
 
 #### **will list all the files that are currently being tracked by Git in the repository.**
 
-#### **--stage list to files in the stage area**
+#### **`--stage` list to files in the stage area**
 
-#### **--others list untracked files**
+#### **`--others` list untracked files**
 
-#### **--others --exclude-standard list untracked files but remove from it .gitignore**
+#### **`--others --exclude-standard` list untracked files but remove from it .gitignore**
 
 <hr/>
 
@@ -225,8 +236,8 @@ show's the data like that
 
 ## **`git checkout .`**
 
-#### **will look for the last saved changes on staging area or last commit and**
-#### **overwrite the working tree**
+#### **will look for the last saved changes on staging area first then on last commit**
+#### **and overwrite the working tree**
 <hr/>
 
 ## **`git checkout -- . (git restore .)`**
@@ -236,6 +247,19 @@ show's the data like that
 
 ## **`git restore --staged . (git reset HEAD .)`**
 #### **Both will remove all your files from staging area but keep the changes in worktree**
+
+<hr/>
+
+## **`git reset commit-hash`**
+#### **remove all commits that comes after the provided commit in the code**
+#### **and puth all changes related to provided commit in staging area**
+#### **`--soft` do not put changes in staging area (do not put any where just remove commits with current changes saved)**
+#### **`--hard` will put directly in working tree and not staging area**
+
+<hr/>
+
+## **`git revert commit-hash`**
+#### **create new commit with opposite changes introduced in that commit**
 
 <hr/>
 
@@ -309,6 +333,7 @@ show's the data like that
 ## **`git cherry-pick commit-hash1 commit-hash2`**
 
 #### **create new commits that have this changes on top of your current commits**
+#### **`--no-commit` will apply directly the changes to your working tree and staging them also(no new commits)**
 
 <hr/>
 
@@ -342,5 +367,27 @@ show's the data like that
 
 #### **shows the differences between the staged changes and the last commit.**
 
+<hr/>
 
+## **`git branch --set-upstream-to=origin/main feature-branch`**
 
+#### **manually set up a branch in Git to track a remote branch**
+
+<hr/>
+
+## **`git branch --unset-upstream`**
+
+#### **remove the tracking relationship between a local branch and a remote branch in Git**
+
+<hr/>
+
+## **`git tag -d my-tag`**
+#### **Delete the old tag**
+<hr/>
+
+## **`git tag my-tag`**
+#### **Recreate the tag**
+<hr/>
+
+## **`git push --force origin my-tag`**
+#### **Force push the updated tag to the remote repository (if needed)**
