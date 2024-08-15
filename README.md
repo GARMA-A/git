@@ -201,7 +201,7 @@ show's the data like that
 
 ## **`git log`**
 
-#### **`git shortlog` summary version**
+#### **`git shortlog` summary version `git log main..Feature/Branch` show only feature branch commits**
 
 #### **`git log --stat` describing version**
 
@@ -274,7 +274,6 @@ show's the data like that
 #### **The prefer way is to use (git checkout -b new-branch-name) to make branch point to it so that it easly can return to it**
 #### **if you don't do that and return to the main branch the only way to return to this commits is from reflog**
 #### **`git branch -f existing-branch` another way is to force existing branch to point to current commit**
-
 
 
 <hr/>
@@ -391,3 +390,6 @@ show's the data like that
 
 ## **`git push --force origin my-tag`**
 #### **Force push the updated tag to the remote repository (if needed)**
+
+## ** `git blame fileName`
+#### **give you line by line tell you the commit that line saved into who write that line and the date**
