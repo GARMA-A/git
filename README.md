@@ -189,15 +189,6 @@ show's the data like that
 # **The Most Important Git Commmands**
 
 
-## **`git cat-file commit-hash`**
-
-#### **`-p` will show content of the obj**
-
-#### **`-s` size of the obj**
-
-#### **`-t` type of the obj**
-
-<hr/>
 
 ## **`git log`**
 
@@ -212,10 +203,17 @@ show's the data like that
 
 <hr/>
 
-## **`git rm --cached filename`**
+## **`git rm filePath` or `.` or `*.txt`**
+#### **will Delete the file(all files) from workingTree & stagingArea & gitRepo like you normally delete it**
+#### **`--cached filePath`make the file untracked do not delete it just untracked**
+#### **you can use `-r` to rm folder**
+<hr/>
 
-#### **make the file untracked do not delete it just untracked**
-#### **you can use -r before --cached and . after --cached to rm every thing**
+## **`git mv`**
+#### **`file.txt renamed_file.txt`with this context will rename the file**
+#### **`file1.txt file2.txt new_folder/`move the files inside the new_folder/**
+
+
 <hr/>
 
 ## **`git ls-files`**
@@ -250,6 +248,10 @@ show's the data like that
 
 <hr/>
 
+## **`git restore`**
+#### **`--source=commit-hash <file-path>`this option restore a file to specific commit**
+#### **`--source=<commit-hash> --staged --worktree .`this options restore all your working tree and staging area to specific commit**
+
 ## **`git reset commit-hash`**
 #### **remove all commits that comes after the provided commit in the code**
 #### **and puth all changes related to provided commit in staging area**
@@ -276,6 +278,19 @@ show's the data like that
 #### **`git branch -f existing-branch` another way is to force existing branch to point to current commit**
 
 
+<hr/>
+
+## **`git remote`**
+#### **`add origin https://github.com/myrepo.com`will add this url as remote repo named origin**
+#### **`remove origin`will remove the remote branch**
+
+<hr/>
+
+## **`git branch`**
+#### **`--set-upstream-to=origin/main`manually set the upstream remote to your local branch**
+#### **`--unset-upstream`manually discard the upstream to your current branch**
+#### **`-v`list to you the remote branches `-vv` list the remotes with the upstreams**
+#### **`-d` delete the branch after merge it or `-D` if it not merge yet but you sure you want to delete it**
 <hr/>
 
 
@@ -393,3 +408,6 @@ show's the data like that
 
 ## ** `git blame fileName`
 #### **give you line by line tell you the commit that line saved into who write that line and the date**
+
+
+
