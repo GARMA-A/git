@@ -186,6 +186,17 @@ show's the data like that
 
 ### i dont agree with that
 
+```yaml
+> Ihave idea 1 that is lab lab laaaa....
+
+### i think i agree with this
+
+> also idea 2 that is lab lab laaaa also....
+
+### i dont agree with that
+
+```
+
 # **The Most Important Git Commmands**
 
 
