@@ -57,9 +57,9 @@ noraml text  **Bold Text**  *italic Text*
 
 ```yaml
 1. first
-1. sub1
-2. sub2
-3. sub2
+   1. sub1
+   2. sub2
+   3. sub2
 2. second
 3. third
 ```
