@@ -214,6 +214,10 @@ show's the data like that
 
 <hr/>
 
+## **git show commit-hash**
+### **Displays detailed information about a specific commit.**
+<hr/>
+
 ## **`git rm filePath` or `.` or `*.txt`**
 #### **will Delete the file(all files) from workingTree & stagingArea & gitRepo like you normally delete it**
 #### **`--cached filePath`make the file untracked do not delete it just untracked**
@@ -419,6 +423,15 @@ show's the data like that
 
 ## ** `git blame fileName`
 #### **give you line by line tell you the commit that line saved into who write that line and the date**
+
+
+## **git stash apply stash@{n}** 
+### **Applies a specific stash but keeps it in the stash list**
+## **git fetch --prune** 
+### **Fetches remote updates and removes local references to deleted remote branches**
+## **git bisect start** 
+### **Begins a binary search to find the commit that introduced a bug**
+git merge --abort – Cancels an ongoing merge and restores the pre-merge state
 
 
 
